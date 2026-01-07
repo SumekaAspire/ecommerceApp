@@ -51,5 +51,53 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>AlanSans-ExtraBold.ttf</string>
+		<string>AlanSans-Light.ttf</string>
+		<string>Figtree-ExtraBold.ttf</string>
+		<string>Figtree-Bold.ttf</string>
+		<string>GoogleSans-Italic.ttf</string>
+		<string>Frijole.ttf</string>
+		<string>OpenSans-VariableFont.ttf</string>
+		<string>AlanSans-SemiBold.ttf</string>
+		<string>AlanSans-Bold.ttf</string>
+		<string>Figtree-Light.ttf</string>
+		<string>Figtree-MediumItalic.ttf</string>
+		<string>AlanSans-Medium.ttf</string>
+		<string>Figtree-ExtraBoldItalic.ttf</string>
+		<string>Figtree-Medium.ttf</string>
+		<string>Figtree-Regular.ttf</string>
+		<string>Figtree-BlackItalic.ttf</string>
+		<string>AlanSans-Regular.ttf</string>
+		<string>Figtree-BoldItalic.ttf</string>
+		<string>Figtree-Italic.ttf</string>
+		<string>Figtree-Black.ttf</string>
+		<string>OpenSans-Italic-VariableFont.ttf</string>
+		<string>GoogleSans.ttf</string>
+		<string>Figtree-LightItalic.ttf</string>
+		<string>RobotoCondensed-VariableFont.ttf</string>
+		<string>RobotoCondensed-Italic-VariableFont.ttf</string>
+    <string>AntDesign.ttf</string>
+     <string>Entypo.ttf</string>
+     <string>EvilIcons.ttf</string>
+     <string>Feather.ttf</string>
+     <string>FontAwesome.ttf</string>
+     <string>FontAwesome5_Brands.ttf</string>
+     <string>FontAwesome5_Regular.ttf</string>
+     <string>FontAwesome5_Solid.ttf</string>
+     <string>FontAwesome6_Brands.ttf</string>
+     <string>FontAwesome6_Regular.ttf</string>
+     <string>FontAwesome6_Solid.ttf</string>
+     <string>Foundation.ttf</string>
+     <string>Ionicons.ttf</string>
+     <string>MaterialIcons.ttf</string>
+     <string>MaterialCommunityIcons.ttf</string>
+     <string>SimpleLineIcons.ttf</string>
+     <string>Octicons.ttf</string>
+     <string>Zocial.ttf</string>
+     <string>Fontisto.ttf</string>
+
+	</array>
 </dict>
 </plist>
