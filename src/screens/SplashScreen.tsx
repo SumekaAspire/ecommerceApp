@@ -1,11 +1,11 @@
-import { View, Text, Image, StyleSheet } from 'react-native'
-import React, { useEffect } from 'react'
+import { View,Text, Image, StyleSheet } from 'react-native'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { images } from '../constants/image'
 import { colors } from '../styles/colors'
 import { useNavigation } from '@react-navigation/native'
 import { textData } from '../constants/text'
-import { globalStyles } from '../styles/globalStyles'
+import { useEffect } from 'react'
 
 /**
  * SplashScreen component for the application.
@@ -28,6 +28,7 @@ const SplashScreen = () => {
     <SafeAreaView style={ styles.container}>
         <Text style={styles.text}>{textData.appName}</Text>
         <Image source={images.splashIcon} style={styles.image}/>
+        <MaterialIcons name="star" size={32} color="black" />
     </SafeAreaView>
   )
 }
