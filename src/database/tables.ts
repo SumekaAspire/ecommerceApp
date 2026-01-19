@@ -12,7 +12,7 @@ export const createTables = async() =>{
          password TEXT NOT NULL,
          role TEXT DEFAULT 'USER',
          isActive INTEGER DEFAULT 1,
-         createdAt TEXT
+         createdAt TEXT DEFAULT (datetime('now'))
       );  
    `)
      console.log('User Tables created successfully');
