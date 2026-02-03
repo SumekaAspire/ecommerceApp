@@ -57,7 +57,7 @@ const AdminLogin = () => {
           await storeUserData('user', adminLogin),
           dispatch(setUser(adminLogin));
           showToast({type:toast.typeSuccess, text1: toast.loginSuccess, text2: toast.loginSucessText, position: "bottom",});
-          navigation.replace("AdminHome");
+          navigation.replace("HomeTab");
           setEmail("");
           setPassword("");
         }else{

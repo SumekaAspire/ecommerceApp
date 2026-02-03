@@ -16,8 +16,8 @@ import { setUser } from '../store/slices/userSlice'
  * @returns rendered splash screen component
  */
 const SplashScreen = () => {
-    const navigation: any = useNavigation();
-    const dispatch = useDispatch<AppDispatch>();
+    // const navigation: any = useNavigation();
+    // const dispatch = useDispatch<AppDispatch>();
     // useEffect(()=>{
     //     /**
     //     //  * Timer is used to navigate to intro screen after a delay of 5 seconds.
@@ -28,34 +28,34 @@ const SplashScreen = () => {
     //     },5000)
     //     return()=> clearTimeout(timer);
     // },[])
-    useEffect(()=>{
-      const timer = setTimeout(async() =>{
-        try{
-          const savedUser = await getUserData('user');
-          const introCompleted = await getUserData('introCompleted');
+    // useEffect(()=>{
+    //   const timer = setTimeout(async() =>{
+    //     try{
+    //       const savedUser = await getUserData('user');
+    //       const introCompleted = await getUserData('introCompleted');
 
-          if(!introCompleted){
-           //navigate to introscreen if intro is not completed
-            return navigation.replace('Intro');
-          }else if(savedUser){
-            //if user exists, stored in redux and goes to home
-             dispatch(setUser(savedUser));
-            if(savedUser.role === "ADMIN"){
-             return  navigation.replace("AdminHome");
-            }else{
-              return navigation.replace("HomeTab");
-            }
-          }
-          //if intro is completed but user is not logged in, goes to login
-          navigation.replace("Login");
+    //       if(!introCompleted){
+    //        //navigate to introscreen if intro is not completed
+    //         return navigation.replace('Intro');
+    //       }else if(savedUser){
+    //         //if user exists, stored in redux and goes to home
+    //          dispatch(setUser(savedUser));
+    //         if(savedUser.role === "ADMIN"){
+    //          return  navigation.replace("AdminHome");
+    //         }else{
+    //           return navigation.replace("HomeTab");
+    //         }
+    //       }
+    //       //if intro is completed but user is not logged in, goes to login
+    //       navigation.replace("Login");
 
-        }catch(error){
-          console.log('Erroe in checking splash: async storage', error);
-          navigation.replace("Login");
-        }
-      }, 3000); // delay the splash
-      return () => clearTimeout(timer);
-    },[navigation, dispatch])
+    //     }catch(error){
+    //       console.log('Erroe in checking splash: async storage', error);
+    //       navigation.replace("Login");
+    //     }
+    //   }, 3000); // delay the splash
+    //   return () => clearTimeout(timer);
+    // },[navigation, dispatch])
   return (
     <SafeAreaView style={ styles.container}>
         <Text style={styles.text}>{textData.appName}</Text>

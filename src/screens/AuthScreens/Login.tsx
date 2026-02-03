@@ -45,13 +45,17 @@ const Login = () => {
         setGreetings(getGreeting());
     },60*1000);
     return ()=> clearInterval(interval);
-  })
+  },[])
   //handle navigates to SignUp and AdminLogin
   const handleNavigateToSignUp =()=>{
     navigation.navigate('SignUp');
   }
    const handleNavigateToAdminLogin=()=>{
     navigation.navigate('AdminLogin');
+  }
+  // handle navigate as guest
+  const handleNavigateAsGuest=()=>{
+    navigation.navigate('HomeTab');
   }
   
   //handles Login Button navigation with validtions, returns Login button to navigate to next screen
@@ -75,7 +79,7 @@ const Login = () => {
             await storeUserData('user', validUser),
             dispatch(setUser(validUser));
             showToast({type:toast.typeSuccess, text1: toast.loginSuccess, text2: toast.loginSucessText, position: "bottom",});
-            navigation.replace("HomeTab");
+            // navigation.replace("HomeTab"); //Navigation is handled automatically by AuthNavigation
             setEmail("");
             setPassword("");
           }else if(validUser.role === textData.roleAdmin){
@@ -92,11 +96,10 @@ const Login = () => {
    }
   return (
     <View style={globalStyles.container}>
-     
+      {/* navigate to admin login */}
+      <LinkHandler content={textData.adminUser} onPress={handleNavigateToAdminLogin} textStyle={styles.adminLoginNavigator} viewStyle={{ alignSelf: 'flex-end' }} />
       <Text style={globalStyles.heading}>{greetings}</Text>
       <Text style={globalStyles.subHeading}>{textData.loginWelcome}</Text>
-      {/* admin login */}
-      <LinkHandler content={textData.adminUser} onPress={handleNavigateToAdminLogin} textStyle={styles.adminLoginNavigator} viewStyle={{ alignSelf: 'flex-end' }} />
       {/* email */}
       <UserTextInput
         value={email}
@@ -131,8 +134,11 @@ const Login = () => {
        {loading?( <ActivityIndicator size="small" color={colors.orange} style={{marginVertical:20, }}/>): (
         <Button text={textData.loginText} onPress={handleLogin} containerStyle={styles.loginButton}/>
         )}      
+
        {/* Move to signUp screen through register text  - reusable component*/}
        <LinkHandler onPress={handleNavigateToSignUp} content={textData.register} textStyle={styles.textRegister} viewStyle={{alignSelf:"flex-start"}}/>
+       {/* Move to hometab as as guest */}
+       <Button text={textData.continueAsGuest} onPress={handleNavigateAsGuest} containerStyle={styles.loginButton}/>
 
        {/* OR Login with text and  icon to login */}
        <Text style={globalStyles.smallText}>{textData.orLoginWith}</Text>
@@ -155,7 +161,7 @@ const styles=StyleSheet.create({
   
   forgetPassword: {
     fontSize: 14,
-    color: colors.orange,
+    color: colors.iconSkip,
     fontFamily: "AlanSans-Medium",
     marginLeft:15,
     marginTop:-5,
@@ -169,14 +175,13 @@ const styles=StyleSheet.create({
   },
   loginButton:{
     marginTop:15, 
-    marginHorizontal:15,
+    marginHorizontal:12,
     marginBottom:10,
   },
   adminLoginNavigator:{
-    marginBottom:10,
     marginRight:20,
-    fontSize:14,
-    color: colors.orange,
+    fontSize:15,
+    color: colors.iconSkip,
     fontFamily: 'AlanSans-SemiBold',
   }
 

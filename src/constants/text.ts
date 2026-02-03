@@ -32,12 +32,20 @@ export const textData ={
     password: 'Password',
     roleAdmin:"ADMIN",
     roleUser:"USER",
+    continueAsGuest:"Continue as Guest",
 
 
     /*AdminLogin */
     adminUser:"Are you an admin?",
     helloAdmin:"Hello, ADMIN !!",
     userRegister:"Don't have an account? User Register?",
+
+    //custom drawer
+    hello:"Hello,",
+    helloGuest:"Hello, Guest",
+    logout: "Logout",
+    logoutQuestion:"Do you really want to logout?",
+    cancel:"Cancel",
 
     
    /*SignUp Screen */
@@ -92,5 +100,8 @@ export const toast ={
      emailAlreadyExists:"Email already Registered",
      loginInstead:"Please login instead",
 
+     //custom drawer
+     loggedOut:"Logged Out",
+     seeyouAgain:"See you again.."
  
 }

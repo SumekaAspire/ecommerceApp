@@ -27,6 +27,12 @@ export const colors={
     faceBook: "#465ee6ff",
     twitter: "#319ec6ff",
 
+    //drawer navigation
+    drawerBackgroundColor:"#e7e8efff",
+    activeItem:"#c6ccd7ff",
+
+    //homescreen product category
+    productCategoryBackground:"#d2b4b4ff",
     //termsand condiiton , productList screen
     modalOverlay:"rgba(0,0,0,0.5)",
 //     selectedOption:"#ecb385ff",

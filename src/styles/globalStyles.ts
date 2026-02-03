@@ -8,6 +8,10 @@ export const globalStyles = StyleSheet.create({
     padding: 20,
     paddingTop:40,
   },
+  screenContainer:{
+    flex: 1,
+    backgroundColor: colors.PRIMARY_BACKGROUNDCOLOR,
+  },
   text: {
     color: colors.black,
     fontSize: 14,

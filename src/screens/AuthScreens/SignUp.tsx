@@ -132,7 +132,7 @@ const SignUp = () => {
           />
       {/* SignUp Button - reusable component, navigates to next screen*/}
        {loading?( <ActivityIndicator size="small" color={colors.orange} style={{marginVertical:20, }}/>): (
-          <Button text={textData.continue} onPress={handleSignUp} containerStyle={{marginTop:20, marginLeft:11, marginBottom:10}}/>
+          <Button text={textData.continue} onPress={handleSignUp} containerStyle={{marginTop:20, marginHorizontal:10, marginBottom:10}}/>
         )}  
 
       {/* Move to Login screen through already have an account text */}

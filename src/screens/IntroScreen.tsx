@@ -37,7 +37,9 @@ const IntroScreen = () => {
  //Skip - Handles navigation To LoginScreen ,Triggers when user clicked skip text
   const goToLogin = async()=>{
     await storeUserData("introCompleted", true);
-    navigation.replace("Login");
+    // navigation.navigation("Login");
+    navigation.reset({ index: 0,routes: [{ name: 'Login' }],});
+
   }
   //handle previous and Next buttons, navigate to login as continue button
   const handleNext = async()=>{
